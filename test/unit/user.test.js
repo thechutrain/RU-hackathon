@@ -17,6 +17,12 @@ UNIT TEST - user collection
 ==============================
 `
 
+// testing variables
+const user1 = {
+  username: 'alan',
+  password: 'password'
+}
+
 describe(title, () => {
   before(() => {
     MONGOOSE_DB.connection.once('connected', () => {
@@ -35,10 +41,7 @@ describe(title, () => {
   })
 
   it('should let me add a new user', (done) => {
-    const alan = new User({
-      username: 'alan',
-      password: 'secret'
-    })
+    const alan = new User(user1)
     alan.save((err) => {
       if (!err) {
         done()
@@ -49,7 +52,19 @@ describe(title, () => {
   it('should be able to find the new user', (done) => {
     User.find({}).exec((err, queryResult) => {
       // console.log(queryResult)
+      if (err) { console.log(err) }
       expect(queryResult).to.have.lengthOf(1)
+      done()
+    })
+  })
+
+  it('should be able to authenticate the newly made user', (done) => {
+    User.findOne({ username: user1.username }).exec((err, queryResult) => {
+      if (err) { console.log(err) }
+      const validPass = queryResult.checkPassword(user1.password)
+      const invalidPass = queryResult.checkPassword('wrong password')
+      expect(validPass).to.be.true()
+      expect(invalidPass).to.be.false()
       done()
     })
   })
