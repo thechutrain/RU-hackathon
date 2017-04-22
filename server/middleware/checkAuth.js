@@ -1,5 +1,4 @@
 const jwt = require('jsonwebtoken')
-// const User = require('../models/user')
 
 module.exports.adminOnly = () => {
   return function (req, res, next) {
@@ -38,16 +37,7 @@ module.exports.parseTokenCookie = () => {
           req.user = null
           return next()
         }
-        // 4. valid token save the decoded user data in the request object
-        // so all downstream middleware function have access to user credentials
-        /*
-        ex. of schema of what req.user will look like
-        req.user:  { _id: '58f56dcb6200e636e825383c',
-        username: 'alan',
-        isAdmin: true,
-        exp: 1492526549,
-        iat: 1492522949 }
-        */
+        // 4. valid token
         req.user = decoded
         return next()
       }) // ends jwt.verity
