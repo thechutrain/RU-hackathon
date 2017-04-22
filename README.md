@@ -3,6 +3,7 @@
 > a JWT authentication express.js boilerplate app built w./ handlebars + mongo
 
 - RU-hackathon project
+- [Demo](https://ifone8.herokuapp.com/)
 
 Contributers
 --------------
