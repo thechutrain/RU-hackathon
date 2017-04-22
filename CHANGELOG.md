@@ -9,3 +9,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - using JWT boilerplate w. handlebars
 - refactoring client-side JS
+- added a test for userSchema method of 'checkPassword'
