@@ -1,0 +1,57 @@
+{
+  "name": "jwt-auth-boilerplate",
+  "version": "1.0.0",
+  "description": "JWT authenticate boilerplate express app",
+  "main": "server/server.js",
+  "scripts": {
+    "connect-test-db": "export PORT=8080 NODE_ENV='testing'; node ./test/connection.js",
+    "mocha-tests": "export PORT=8080 NODE_ENV='testing'; find ./test -name '*test.js' | node_modules/.bin/mocha --recursive",
+    "test": "concurrently \"npm run connect-test-db\" \"npm run mocha-tests\" ",
+    "travis-test": "find ./test -name '*test.js' | node_modules/.bin/mocha --recursive",
+    "lint:server": "node_modules/.bin/eslint --fix server/",
+    "lint:test": "node_modules/.bin/eslint --fix test/",
+    "bundle": "node_modules/.bin/webpack",
+    "dev": "nodemon server/server.js",
+    "start": "node server/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thechutrain/jwt-auth-boilerplate.git"
+  },
+  "author": "Alan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thechutrain/jwt-auth-boilerplate/issues"
+  },
+  "homepage": "https://github.com/thechutrain/jwt-auth-boilerplate#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.1",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "concurrently": "^3.4.0",
+    "cookie-parser": "^1.4.3",
+    "dirty-chai": "^1.2.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.3.0",
+    "mocha": "^3.2.0",
+    "mongoose": "^4.9.4",
+    "morgan": "^1.8.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "webpack": "^2.4.1"
+  }
+}
