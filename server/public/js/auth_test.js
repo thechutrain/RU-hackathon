@@ -20,6 +20,7 @@ $(document).ready(function () {
       msg = $('<p>').text(response.data.msg)
       adminData.append(msg)
     }).catch(function (err) {
+      console.warn(err)
       msg = $('<p>').text('You must be an admin to view this data')
       adminData.append(msg)
     })
@@ -34,7 +35,8 @@ $(document).ready(function () {
     }).then(function (response) {
       msg = $('<p>').text(response.data.msg)
       userData.append(msg)
-    }).catch(function(err) {
+    }).catch(function (err) {
+      console.warn(err)
       msg = $('<p>').text('You must be signed in to view this data')
       userData.append(msg)
     })

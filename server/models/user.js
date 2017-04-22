@@ -18,19 +18,17 @@ const userSchema = new Schema({
 
 // 2. user schema methods
 userSchema.methods = {
-  // Can't user arrow function yoooo! B/c wont bind to userSchema
+  // Can't user arrow function! Wont get bound correctly
   checkPassword: function (inputPassword) {
     return bcrypt.compareSync(inputPassword, this.password)
   },
   hashPassword: (plainTextPassword) => {
-    // this.password = bcrypt.hashSync(plainTextPassword, 10)
     return bcrypt.hashSync(plainTextPassword, 10)
   }
 }
 
 // 3. hooks
 userSchema.pre('save', function (next) {
-  // this.hashPassword(this.password)
   this.password = this.hashPassword(this.password)
   next()
 })

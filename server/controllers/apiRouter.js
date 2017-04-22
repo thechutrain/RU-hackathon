@@ -4,14 +4,19 @@ const adminOnly = require('../middleware/checkAuth').adminOnly
 const anyUserOnly = require('../middleware/checkAuth').anyUserOnly
 const User = require('../models/user')
 
-// ROUTE for testing!!
+
 router.get('/users', (req, res) => {
+  // string for find, for fields you want
   User.find({}, 'username isAdmin', (err, result) => {
     if (err) { return res.json({ err }) }
     res.json(result)
   })
 })
 
+/** ========== ROUTES for TESTING ==========
+ * GET @ api/logged-in-only/data --> for logged in users only
+ *  GET @ api/admin-only/data' --> logged in & admin only
+ */
 router.get('/logged-in-only/data', anyUserOnly(), (req, res) => {
   const user = JSON.stringify(req.user, null, 4)
   let msg = `
