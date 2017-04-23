@@ -1,0 +1,290 @@
+.iphone-container {
+  /*width: 750px;*/
+  border: 1px solid red;
+}
+
+#iphone-screen-container {
+  border: 5px red solid;
+}
+
+#iphone {
+  margin: 0 auto;
+  height: 612px;
+  width: 312px;
+  background-color: #000;
+  -webkit-border-radius: 30px;
+  border-radius: 30px; 
+  -webkit-box-shadow: 1px -3px 0px 1px #c6c4c3;
+  box-shadow: 1px -3px 0px 1px #c6c4c3;
+  display: block;
+  position: relative;
+  border: 2px solid #999;
+}
+.camera {
+  width: 15px;
+  height: 15px;
+  background: #202020;
+  margin: 34px 97px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+.lens {
+  width: 4px;
+  height: 4px;
+  background: #031659;
+  margin: 4px 4px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.speaker {
+  width: 67.5px;
+  height: 18px;
+  background: #202020;
+  margin: 33px 127px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.grill {
+  width: 52px;
+  height: 6px;
+  background: #727272;
+  margin: 6px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.screen {
+  background: #202020;
+  height: 438px;
+  width: 291px;
+  margin: 82px 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+#iphone-screen-container {
+  flex-grow: 1;
+  border: 2px solid red;
+  position: relative;
+}
+/* ===== TOP BANNER ======= */
+/*div#screen-top-banner {
+  height: 15%;
+  border: 2px dashed green;
+  z-index: 5;
+}*/
+
+/* ===== Middle Content ======= */
+div#screen-body {
+  /*height: 85%;*/
+  height: 100%;
+  border: 3px yellow solid;
+  z-index: 3;
+  background: whitesmoke;
+  position: relative;
+}
+
+div.number-container{
+  border: 5px brown solid;
+  height: 85%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  /*padding-top: 10px;
+  padding-bottom: 10px;*/
+}
+
+div#status-wrapper {
+  height: 10%;
+  width: 100%;
+  border: 2px green solid;
+}
+
+/*p#msg-status {
+
+}*/
+
+div#phone-number-display-wrapper {
+  height: 15%;
+  width: 100%;
+  border: 1px solid pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+div.num-keyboard {
+  display: flex;
+  flex-flow: row wrap;
+  height: 75%;
+  background: whitesmoke;
+}
+
+div.num-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 33.3333%;
+  border: 1px solid black;
+}
+
+div.num-button:hover {
+  cursor: pointer;
+  background: turquoise;
+}
+
+div#clear-num-button {
+  display: flex;
+  flex: 1 0 33.333%;
+  background: whitesmoke;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+div#clear-num-button:hover {
+  cursor: pointer;
+  background: turquoise;
+}
+
+div#delete-num-button {
+  display: flex;
+  flex: 1 0 33.333%;
+  background: #d9534f;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+div#delete-num-button:hover {
+  cursor: pointer;
+  /*border: 2px solid black;*/
+  /*background: turquoise;
+  */
+}
+
+/*div.number-row {
+  flex: 1;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  padding-left: 5px;
+  padding-right: 5px;
+}*/
+
+/*div.num-item-container {
+  flex-grow: 1;
+  border: 2px solid black;
+}*/
+
+
+
+/* ===== Bottom Content ======= */
+div#screen-bottom-banner {
+  position: absolute;
+  border: 2px blue solid;
+  width: 100%;
+  height: 15%;
+  bottom: 0px;
+  /*background: yellowgreen;*/
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button#call-action-btn {
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+}
+/*.screen-nav {
+  order: 5;
+  flex-grow: 1;
+  border: 2px solid red;
+}*/
+
+/*.home {
+  width: 60px;
+  height: 60px;
+  background: #000000;
+  border: 1px solid #202020;
+  border: 2px solid red;
+  margin: 355px 80px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.square {
+  width: 12px;
+  height: 12px;
+  background: #black;
+  border: 1px solid white;
+  margin: 13px 13px;
+  position: absolute;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; */
+
+/*
+
+
+.speaker {
+  width: 67.5px;
+  height: 18px;
+  background: #202020;
+  margin: 33px 127px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.grill {
+  width: 52px;
+  height: 6px;
+  background: #727272;
+  margin: 6px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.screen {
+  background: #202020;
+  height: 438px;
+  width: 291px;
+  margin: 82px 10px;
+  position: absolute;
+}
+
+.home {
+  width: 60px;
+  height: 60px;
+  background: #black;
+  border: 1px solid #202020;
+  margin: 355px 80px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.square {
+  width: 12px;
+  height: 12px;
+  background: #black;
+  border: 1px solid white;
+  margin: 13px 13px;
+  position: absolute;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; 
+}*/

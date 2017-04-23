@@ -32,6 +32,7 @@ app.engine('handlebars', exphbs({
 app.use('/', require('./controllers/htmlRouter'))
 app.use('/auth', require('./controllers/authRouter'))
 app.use('/api', require('./controllers/apiRouter'))
+app.use('/twilio', require('./controllers/twilioRouter'))
 
 // ========== start server ============
 if (process.env.NODE_ENV !== 'testing') {

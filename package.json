@@ -1,8 +1,11 @@
 {
-  "name": "jwt-auth-boilerplate",
+  "name": "ifone8",
   "version": "1.0.0",
   "description": "JWT authenticate boilerplate express app",
   "main": "server/server.js",
+  "engines": {
+    "node": "6.9.1"
+  },
   "scripts": {
     "connect-test-db": "export PORT=8080 NODE_ENV='testing'; node ./test/connection.js",
     "mocha-tests": "export PORT=8080 NODE_ENV='testing'; find ./test -name '*test.js' | node_modules/.bin/mocha --recursive",
@@ -39,7 +42,8 @@
     "mongoose": "^4.9.4",
     "morgan": "^1.8.1",
     "passport": "^0.3.2",
-    "passport-jwt": "^2.2.1"
+    "passport-jwt": "^2.2.1",
+    "twilio": "^2.11.1"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
