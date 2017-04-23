@@ -23,6 +23,12 @@ router.get('/phone', (req, res) => {
   res.render('phone', {msg: 'this is a test', user: req.user})
 })
 
+// TEST ROUTE
+router.get('/test-call', (req, res) => {
+  console.log('User:', req.user)
+  res.render('test-call', {msg: 'this is a test', user: req.user})
+})
+
 // AUTHENTICATED ROUTES
 router.get('/user-only', anyUserOnly(), (req, res) => {
   res.render('authPages/user-only', {user: req.user})
