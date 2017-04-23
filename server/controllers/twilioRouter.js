@@ -17,7 +17,7 @@ router.post('/generate-token', (req, res) => {
   }
   // capability.allowClientIncoming(page == "/dashboard"? "support_agent" : "customer");
   const token = capability.generate()
-  console.log('Token: ', token)
+  // console.log('Token: ', token)
   res.setHeader('Content-Type', 'application/json')
   res.send(JSON.stringify({ token: token }))
 })

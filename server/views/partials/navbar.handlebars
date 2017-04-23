@@ -1,17 +1,16 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">
-        {{!--<img alt="Brand" src="...">--}}
-        HOME
-      </a>
       <ul class="nav navbar-nav">
         {{#if user }}
-          <p class="navbar-text navbar-right"> Signed in as: <strong>{{ user.username }}</strong></p>
-          <li><a id="logout-link" href="#">logout</a></li>
+        <p class="navbar-text navbar-left">Welcome back, <strong>{{ user.username }}</strong>!</p>
+        <li><a id="logout-link" href="#">logout</a></li>
+          {{!--<p class="navbar-text navbar-right"> Signed in as: <strong>{{ user.username }}</strong></p>
+          <li><a id="logout-link" href="#">logout</a></li>--}}
         {{else}}
+          <p class="navbar-text navbar-left">Hello <strong>Guest</strong>!</p>
           <li><a href="/login">login</a></li>
-          <li><a href="/register">register</a></li>
+          <li><a href="/">register</a></li>
         {{/if}}
       </ul>
     </div>
