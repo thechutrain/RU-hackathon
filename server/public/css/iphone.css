@@ -1,11 +1,11 @@
-.iphone-container {
-  /*width: 750px;*/
+/*.iphone-container {
+  width: 750px;
   border: 1px solid red;
-}
+}*/
 
-#iphone-screen-container {
+/*#iphone-screen-container {
   border: 5px red solid;
-}
+}*/
 
 #iphone {
   margin: 0 auto;
@@ -71,7 +71,7 @@
 
 #iphone-screen-container {
   flex-grow: 1;
-  border: 2px solid red;
+  /*border: 2px solid red;*/
   position: relative;
 }
 /* ===== TOP BANNER ======= */
@@ -85,14 +85,14 @@
 div#screen-body {
   /*height: 85%;*/
   height: 100%;
-  border: 3px yellow solid;
+  /*border: 3px yellow solid;*/
   z-index: 3;
   background: whitesmoke;
   position: relative;
 }
 
 div.number-container{
-  border: 5px brown solid;
+  /*border: 5px brown solid;*/
   height: 85%;
   width: 100%;
   position: absolute;
@@ -106,7 +106,7 @@ div.number-container{
 div#status-wrapper {
   height: 10%;
   width: 100%;
-  border: 2px green solid;
+  /*border: 2px green solid;*/
 }
 
 /*p#msg-status {
@@ -116,7 +116,7 @@ div#status-wrapper {
 div#phone-number-display-wrapper {
   height: 15%;
   width: 100%;
-  border: 1px solid pink;
+  /*border: 1px solid pink;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,7 +192,7 @@ div#delete-num-button:hover {
 /* ===== Bottom Content ======= */
 div#screen-bottom-banner {
   position: absolute;
-  border: 2px blue solid;
+  /*border: 2px blue solid;*/
   width: 100%;
   height: 15%;
   bottom: 0px;
