@@ -18,6 +18,11 @@ router.get('/register', (req, res) => {
   res.render('register', {msg: 'register page', user: req.user})
 })
 
+router.get('/phone', (req, res) => {
+  console.log('User:', req.user)
+  res.render('phone', {msg: 'this is a test', user: req.user})
+})
+
 // AUTHENTICATED ROUTES
 router.get('/user-only', anyUserOnly(), (req, res) => {
   res.render('authPages/user-only', {user: req.user})

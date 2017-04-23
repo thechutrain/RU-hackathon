@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const twilio = require('twilio')
 
+// ========== GENERATE CAPABILITY TOKEN ==========
 router.post('/generate-token', (req, res) => {
   // create a new twilio capability
   const capability = new twilio.Capability(
@@ -16,8 +17,18 @@ router.post('/generate-token', (req, res) => {
   res.send(JSON.stringify({ token: token }))
 })
 
+// ========== create a TWILIO TWIMLRESPONSE==========
 router.post('/call/connect', twilio.webhook({validate: false}), (req, res, next) => {
   // call.js
+  const phoneNumber = req.body.phoneNumber
+  const callerId = process.env.TWILIO_PHONE_NUMBER
+  const twiml = new twilio.TwimlResponse()
+  // dial right?
+  twiml.dial({ callerId }, function (dial) {
+    dial.number(phoneNumber)
+  })
+  console.log('twiml: ', twiml.toString())
+  res.send(twiml.toString())
 })
 
 module.exports = router
