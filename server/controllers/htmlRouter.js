@@ -30,10 +30,10 @@ router.get('/login', (req, res) => {
 //   res.render('register', {msg: 'register page', user: req.user})
 // })
 
-router.get('/phone', (req, res) => {
-  console.log('User:', req.user)
-  res.render('phone', {msg: 'this is a test', user: req.user})
-})
+// router.get('/phone', (req, res) => {
+//   console.log('User:', req.user)
+//   res.render('phone', {msg: 'this is a test', user: req.user})
+// })
 
 // TEST ROUTE
 // router.get('/test-call', (req, res) => {
