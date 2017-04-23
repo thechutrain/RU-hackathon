@@ -38,8 +38,8 @@ Twilio.Device.connect(function (connection) {
 /**  ============= Step 3 =============
 * make a call
 */
-function makeCall () {
-  // Twilio.Device.connect({ phoneNumber: phoneNumber })
+function makeCall (phoneNumber) {
+  Twilio.Device.connect({ phoneNumber: phoneNumber })
 }
 function hangUp (e) {
   console.log('HANGIN UP!!')
@@ -65,7 +65,7 @@ $(document).ready(function () {
         updateMsg('No speed dial, please enter full number')
       } else {
         updateMsg('calling ...')
-        makeCall()
+        makeCall(phoneNumber)
         // change button to hang up
         $(this).text('Hang up').removeClass('btn-info').addClass('btn-danger')
       }
