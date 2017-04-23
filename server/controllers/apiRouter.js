@@ -4,7 +4,6 @@ const adminOnly = require('../middleware/checkAuth').adminOnly
 const anyUserOnly = require('../middleware/checkAuth').anyUserOnly
 const User = require('../models/user')
 
-
 router.get('/users', (req, res) => {
   // string for find, for fields you want
   User.find({}, 'username isAdmin', (err, result) => {
