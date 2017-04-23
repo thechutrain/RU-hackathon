@@ -11,9 +11,14 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  isAdmin: { type: Boolean, default: false }
-  // created_at: Date,
-  // updated_at: Date
+  isAdmin: { type: Boolean, default: false },
+  contacts: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Contact'
+    }
+  ],
+  recentCalls: []
 })
 
 // 2. user schema methods

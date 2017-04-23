@@ -3,6 +3,22 @@ const router = express.Router()
 const adminOnly = require('../middleware/checkAuth').adminOnly
 const anyUserOnly = require('../middleware/checkAuth').anyUserOnly
 
+// ============
+const User = require('../models/user')
+// const Contact = require('../models/contact')
+function getContacts(username) {
+  return User.findOne({username}, 'username isAdmin contacts recentCalls').populate('contacts')
+  // .exec(function(err, doc) {
+    // if (err) {
+    //   return null
+    // } else {
+    //   console.log(doc)
+    //   return doc
+    // }
+  // })
+}
+// ============
+
 router.get('/', (req, res) => {
   // 1. if no user sign in page
   if (req.user === null) {
@@ -10,8 +26,15 @@ router.get('/', (req, res) => {
     return res.render('register', {user: req.user})
   } else {
   // 2. if theres a user --> show them the phone page
-    console.log('user!!!')
-    return res.render('phone', {user: req.user})
+    // console.log('user!!!')
+    getContacts(req.user.username).then((data) => {
+      console.log(data)
+      return res.render('phone', {user: req.user, data: data})
+    }).catch((err) => {
+      console.log('error: ', err)
+      return res.render('phone', {user: req.user, data: null})
+    })
+    // console.log(userData)
   }
 })
 

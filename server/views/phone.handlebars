@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-sm-12">
+  <div class="col-sm-6">
 
   {{!-- iphone --}}
   <div class="iphone-container">
@@ -22,7 +22,7 @@
           <div id="screen-body">
             <div class="number-container">
               <div id="status-wrapper">
-                <p id="msg-status">calling .... </p>
+                <p id="msg-status"></p>
               </div>
               <div id="phone-number-display-wrapper">
                 <h3 id="phone-number-display"></h3>
@@ -60,6 +60,47 @@
   </div>{{!-- iphone-container --}}
 
   </div>
+
+  {{!-- panels yo--}}
+  <div class="col-sm-6">
+    {{!-- Recent Calls--}}
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent calls</h3>
+      </div>
+
+      <ul class="list-group">
+        {{#each data.recentCalls}}
+        <li class="list-group-item">{{this}}</li>
+        {{/each }}
+        {{!--<li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>--}}
+      </ul>
+    
+    </div>
+
+    {{!-- Address--}}
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">Your Contacts:</h3>
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item"><button class="btn btn-info">Add New Contact</button></li>
+        {{#each data.contacts}}
+        <li class="list-group-item">{{firstName}} {{lastName}}: {{phoneNumber}}</li>
+        {{/each }}
+        {{!--<li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>--}}
+      </ul>
+    </div>
+
+    {{!-- Contacts --}}
+    
+  </div>{{!-- closses col-sm-6 --}}
 </div>
 
 
