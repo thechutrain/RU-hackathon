@@ -1,0 +1,87 @@
+#contain {
+  width: 350px;
+  margin: 0 auto;
+}
+
+#iphone {
+  height: 408px;
+  width: 208px;
+  background-color: #000;
+  -webkit-border-radius: 30px;
+  border-radius: 30px; 
+  -webkit-box-shadow: 1px -3px 0px 1px #c6c4c3;
+  box-shadow: 1px -3px 0px 1px #c6c4c3;
+  display: block;
+  position: relative;
+  border: 2px solid #999;
+}
+
+.camera {
+  width: 10px;
+  height: 10px;
+  background: #202020;
+  margin: 23px 65px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.lens {
+  width: 3px;
+  height: 3px;
+  background: #031659;
+  margin: 3px 3px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.speaker {
+  width: 45px;
+  height: 12px;
+  background: #202020;
+  margin: 22px 85px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.grill {
+  width: 37px;
+  height: 4px;
+  background: #727272;
+  margin: 4px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.screen {
+  background: #202020;
+  height: 292px;
+  width: 194px;
+  margin: 55px 7px;
+  position: absolute;
+}
+
+.home {
+  width: 40px;
+  height: 40px;
+  background: #black;
+  border: 1px solid #202020;
+  margin: 355px 80px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.square {
+  width: 12px;
+  height: 12px;
+  background: #black;
+  border: 1px solid white;
+  margin: 13px 13px;
+  position: absolute;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; 
+}

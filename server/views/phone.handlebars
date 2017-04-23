@@ -1,19 +1,65 @@
-<div id="contain">
-<div id="iphone">
-  <div class="camera">
-    <div class="lens">&nbsp;</div>
-  </div>
-  <div class="speaker">
-    <div class="grill">&nbsp;</div>
-  </div>
-  <div class="screen">
-    <div class="lockscreen">
+<div class="row">
+  <div class="col-sm-12">
+
+  {{!-- iphone --}}
+  <div class="iphone-container">
+    <div id="iphone">
+      {{!-- camera --}}
+      <div class="camera">
+        <div class="lens">&nbsp;</div>
+      </div>
+      {{!-- speaker --}}
+      <div class="speaker">
+        <div class="grill">&nbsp;</div>
+      </div>
+      {{!-- MAIN SCREEN --}}
+      <div class="screen">
+        <div id="iphone-screen-container">
+          {{!-- top banner --}}
+          <div id="screen-top-banner"></div>
+
+          {{!-- body --}}
+          <div id="screen-body">
+            <div class="number-container">
+              <div class="number-row"> row 1 </div>
+              <div class="number-row"> row 2 </div>
+              <div class="number-row"> row 3 </div>
+              <div class="number-row"> row 4 </div>
+              <div class="number-row"> row 5 </div>
+            </div>
+          </div>
+
+          {{!-- bottom banner --}}
+          <div id="screen-bottom-banner"></div>
+        </div>
+        {{!--<div class="screen-nav"></div>--}}
+      </div>
+      {{!-- bottom part --}}
+      <div class="home">
+        <div class="square">&nbsp;</div>
+      </div>
+
     </div>
+  </div>{{!-- iphone-container --}}
+
   </div>
-  <div class="home">
-    <div class="square">&nbsp;</div>
-  </div>
-</div>
 </div>
 
 {{!-- source: https://codepen.io/MayhemBliz/pen/HzfJm --}}
+    {{!--<div id="contain">
+    <div id="iphone">
+      <div class="camera">
+        <div class="lens">&nbsp;</div>
+      </div>
+      <div class="speaker">
+        <div class="grill">&nbsp;</div>
+      </div>
+      <div class="screen">
+        <div class="lockscreen">
+        </div>
+      </div>
+      <div class="home">
+        <div class="square">&nbsp;</div>
+      </div>
+    </div>
+    </div>--}}

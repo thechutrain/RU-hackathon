@@ -1,11 +1,16 @@
-#contain {
-  width: 350px;
-  margin: 0 auto;
+.iphone-container {
+  /*width: 750px;*/
+  border: 1px solid red;
+}
+
+#iphone-screen-container {
+  border: 5px red solid;
 }
 
 #iphone {
-  height: 408px;
-  width: 208px;
+  margin: 0 auto;
+  height: 612px;
+  width: 312px;
   background-color: #000;
   -webkit-border-radius: 30px;
   border-radius: 30px; 
@@ -15,42 +20,40 @@
   position: relative;
   border: 2px solid #999;
 }
-
 .camera {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background: #202020;
-  margin: 23px 65px;
+  margin: 34px 97px;
   position: absolute;
   -webkit-border-radius: 20px;
   border-radius: 20px; 
 }
-
 .lens {
-  width: 3px;
-  height: 3px;
+  width: 4px;
+  height: 4px;
   background: #031659;
-  margin: 3px 3px;
+  margin: 4px 4px;
   position: absolute;
   -webkit-border-radius: 20px;
   border-radius: 20px; 
 }
 
 .speaker {
-  width: 45px;
-  height: 12px;
+  width: 67.5px;
+  height: 18px;
   background: #202020;
-  margin: 22px 85px;
+  margin: 33px 127px;
   position: absolute;
   -webkit-border-radius: 20px;
   border-radius: 20px; 
 }
 
 .grill {
-  width: 37px;
-  height: 4px;
+  width: 52px;
+  height: 6px;
   background: #727272;
-  margin: 4px;
+  margin: 6px;
   position: absolute;
   -webkit-border-radius: 20px;
   border-radius: 20px; 
@@ -58,15 +61,124 @@
 
 .screen {
   background: #202020;
-  height: 292px;
-  width: 194px;
-  margin: 55px 7px;
+  height: 438px;
+  width: 291px;
+  margin: 82px 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+#iphone-screen-container {
+  flex-grow: 1;
+  border: 2px solid red;
+  position: relative;
+}
+/* ===== TOP BANNER ======= */
+/*div#screen-top-banner {
+  height: 15%;
+  border: 2px dashed green;
+  z-index: 5;
+}*/
+
+/* ===== Middle Content ======= */
+div#screen-body {
+  /*height: 85%;*/
+  height: 100%;
+  border: 3px yellow solid;
+  z-index: 3;
+  background: whitesmoke;
+  position: relative;
+}
+
+div.number-container{
+  border: 5px brown solid;
+  height: 85%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column
+}
+
+div.number-row {
+  flex: 1;
+  border: 1px solid red;
+}
+
+/* ===== Bottom Content ======= */
+div#screen-bottom-banner {
+  position: absolute;
+  border: 2px blue solid;
+  width: 100%;
+  height: 15%;
+  bottom: 0px;
+  background: yellowgreen;
+  z-index: 10;
+}
+
+/*.screen-nav {
+  order: 5;
+  flex-grow: 1;
+  border: 2px solid red;
+}*/
+
+/*.home {
+  width: 60px;
+  height: 60px;
+  background: #000000;
+  border: 1px solid #202020;
+  border: 2px solid red;
+  margin: 355px 80px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.square {
+  width: 12px;
+  height: 12px;
+  background: #black;
+  border: 1px solid white;
+  margin: 13px 13px;
+  position: absolute;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; */
+
+/*
+
+
+.speaker {
+  width: 67.5px;
+  height: 18px;
+  background: #202020;
+  margin: 33px 127px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.grill {
+  width: 52px;
+  height: 6px;
+  background: #727272;
+  margin: 6px;
+  position: absolute;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; 
+}
+
+.screen {
+  background: #202020;
+  height: 438px;
+  width: 291px;
+  margin: 82px 10px;
   position: absolute;
 }
 
 .home {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background: #black;
   border: 1px solid #202020;
   margin: 355px 80px;
@@ -84,4 +196,4 @@
   position: absolute;
   -webkit-border-radius: 3px;
   border-radius: 3px; 
-}
+}*/
