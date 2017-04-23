@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "JWT authenticate boilerplate express app",
   "main": "server/server.js",
+  "engines": {
+    "node": "6.9.1"
+  },
   "scripts": {
     "connect-test-db": "export PORT=8080 NODE_ENV='testing'; node ./test/connection.js",
     "mocha-tests": "export PORT=8080 NODE_ENV='testing'; find ./test -name '*test.js' | node_modules/.bin/mocha --recursive",
