@@ -12,7 +12,8 @@ function updateMsg (msg) {
 $(document).ready(function () {
   $.post('/twilio/generate-token', {}, function (data) {
     // Set up the Twilio Client Device with the token
-    console.log(data.token)
+    // console.log(data.token)
+    console.log('got token')
     Twilio.Device.setup(data.token)
   })
 })
@@ -29,7 +30,6 @@ Twilio.Device.ready(function (device) {
 
 // step 4
 Twilio.Device.connect(function (connection) {
-  updateMsg('Calling ... some number?')
   console.log('You are connected yo!!!')
   console.dir(connection)
   console.log('=======================')
@@ -39,6 +39,7 @@ Twilio.Device.connect(function (connection) {
 * make a call
 */
 function makeCall (phoneNumber) {
+  console.log('calling')
   Twilio.Device.connect({ phoneNumber: phoneNumber })
 }
 function hangUp (e) {
