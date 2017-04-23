@@ -9,7 +9,12 @@ router.post('/generate-token', (req, res) => {
       process.env.TWILIO_ACCOUNT_SID,
       process.env.TWILIO_AUTH_TOKEN
   )
-  capability.allowClientOutgoing(process.env.TWILIO_APP_SID)
+  if (process.env.NODE_ENV === 'production') {
+    console.log('production env')
+    capability.allowClientOutgoing(process.env.TWILIO_APP_SID_PRODUCTION)
+  } else {
+    capability.allowClientOutgoing(process.env.TWILIO_APP_SID)
+  }
   // capability.allowClientIncoming(page == "/dashboard"? "support_agent" : "customer");
   const token = capability.generate()
   console.log('Token: ', token)
