@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
   }
 })
 
-router.get('/admin', (req, res) => {
+router.get('/admin', adminOnly(), (req, res) => {
   console.log('User:', req.user)
   res.render('admin', {msg: 'this is a test', user: req.user})
 })
