@@ -21,11 +21,11 @@
           {{!-- body --}}
           <div id="screen-body">
             <div class="number-container">
-              <div id="call-status">
-                <p>calling .... </p>
+              <div id="status-wrapper">
+                <p id="msg-status">calling .... </p>
               </div>
-              <div id="phone-number-display">
-                <h3>908</h3>
+              <div id="phone-number-display-wrapper">
+                <h3 id="phone-number-display"># to call</h3>
               </div>
               <div class="num-keyboard">
                 <div class="num-button" num="1">1</div>
@@ -40,24 +40,14 @@
                 <div id="clear-num-button"> Clear </div>
                 <div class="num-button" num="0">0</div>
                 <div id="delete-num-button"> Del </div>
-                {{!--<div class="button">Go</div>--}}
               </div>
-              {{!-- first row of numbers --}}
-              {{!--<div class="number-row">
-                <button class='btn' data-key'1'>1</button>
-                <button class='btn' data-key'1'>1</button>
-                <button class='btn' data-key'1'>1</button>
-              </div>--}}
-              {{!--<button class='btn' data-key'1'>1</button>
-              <button class='btn' data-key'1'>1</button>
-              <button class='btn' data-key'1'>1</button>
-              <button class='btn' data-key'1'>1</button>
-              <button class='btn' data-key'1'>1</button>--}}
             </div>
           </div>
 
           {{!-- bottom banner --}}
-          <div id="screen-bottom-banner"></div>
+          <div id="screen-bottom-banner">
+            <button class="btn btn-block btn-info" id="call-action-btn">call</button>
+          </div>
         </div>
         {{!--<div class="screen-nav"></div>--}}
       </div>
@@ -71,6 +61,10 @@
 
   </div>
 </div>
+
+
+{{!--<button class="btn btn-info" id="call-btn">Call</button>
+<button class="btn btn-danger" id="hangup-btn">Hang up</button>--}}
 
 {{!-- source: https://codepen.io/MayhemBliz/pen/HzfJm --}}
     {{!--<div id="contain">

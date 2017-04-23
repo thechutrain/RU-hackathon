@@ -1,14 +1,11 @@
 /* global $ */
 $(document).ready(function () {
-  var phoneNumber = [];
+  var phoneNumber = []
 
   function updateNumberDisplay () {
-    var displaySelector = $('div#phone-number-display')
-    displaySelector.empty()
-    var h3Number = $('<h3>').text(phoneNumber.join(''))
-    displaySelector.append(h3Number)
+    var displaySelector = $('h3#phone-number-display')
+    displaySelector.text(phoneNumber.join(''))
   }
-  // updateNumberDisplay()
 
   // ========== EVENT LISTENERS ============
   // event #1: user presses a number button
