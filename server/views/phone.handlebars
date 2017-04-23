@@ -21,18 +21,25 @@
           {{!-- body --}}
           <div id="screen-body">
             <div class="number-container">
-              <div class="phone-number-display"></div>
+              <div id="call-status">
+                <p>calling .... </p>
+              </div>
+              <div id="phone-number-display">
+                <h3>908</h3>
+              </div>
               <div class="num-keyboard">
-                <div class="num-button" data-num="1">1</div>
-                <div class="num-button" data-num="2">2</div>
-                <div class="num-button" data-num="3">3</div>
-                <div class="num-button" data-num="4">4</div>
-                <div class="num-button" data-num="5">5</div>
-                <div class="num-button" data-num="6">6</div>
-                <div class="num-button" data-num="7">7</div>
-                <div class="num-button" data-num="8">8</div>
-                <div class="num-button" data-num="9">9</div>
-                <div class="num-button" data-num="0">0</div>
+                <div class="num-button" num="1">1</div>
+                <div class="num-button" num="2">2</div>
+                <div class="num-button" num="3">3</div>
+                <div class="num-button" num="4">4</div>
+                <div class="num-button" num="5">5</div>
+                <div class="num-button" num="6">6</div>
+                <div class="num-button" num="7">7</div>
+                <div class="num-button" num="8">8</div>
+                <div class="num-button" num="9">9</div>
+                <div id="clear-num-button"> Clear </div>
+                <div class="num-button" num="0">0</div>
+                <div id="delete-num-button"> Del </div>
                 {{!--<div class="button">Go</div>--}}
               </div>
               {{!-- first row of numbers --}}

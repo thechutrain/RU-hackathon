@@ -103,15 +103,26 @@ div.number-container{
   padding-bottom: 10px;*/
 }
 
-div.phone-number-display {
-  height: 20%;
-  border: 1px solid pink;
+div#call-status {
+  height: 10%;
+  width: 100%;
+  border: 2px green solid;
 }
+
+div#phone-number-display {
+  height: 15%;
+  width: 100%;
+  border: 1px solid pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 div.num-keyboard {
   display: flex;
   flex-flow: row wrap;
-  height: 80%;
+  height: 75%;
 }
 
 div.num-button {
@@ -119,9 +130,43 @@ div.num-button {
   align-items: center;
   justify-content: center;
   flex: 1 0 33.3333%;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
+div.num-button:hover {
+  cursor: pointer;
+  background: turquoise;
+}
+
+div#clear-num-button {
+  display: flex;
+  flex: 1 0 33.333%;
+  background: whitesmoke;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+div#clear-num-button:hover {
+  cursor: pointer;
+  background: turquoise;
+}
+
+div#delete-num-button {
+  display: flex;
+  flex: 1 0 33.333%;
+  background: #d9534f;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+div#delete-num-button:hover {
+  cursor: pointer;
+  /*border: 2px solid black;*/
+  /*background: turquoise;
+  */
+}
 
 /*div.number-row {
   flex: 1;
