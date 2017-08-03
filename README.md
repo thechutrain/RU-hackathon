@@ -9,6 +9,7 @@ Wayy cooler and better the iphone7, is the newest iFone8. Just bring your favori
 
 Demo
 -------------
+![Demo](./_screenshots/ifone8_demo.gif)
 Checkout the live demo here: [Demo](https://ifone8.herokuapp.com/)
 
 Bugs
